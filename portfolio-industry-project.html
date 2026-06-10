@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Sky Sports Women’s Football industry collaboration case study.">
+    <meta name="author" content="Ella Hung">
+    <title>Sky Sports – Women’s Football – Ella Hung</title>
+
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/steller.css">
+
+    <style>
+        body {
+            background: #fff;
+        }
+
+        .page-shell {
+            padding-top: 90px;
+        }
+
+        .case-wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .case-section {
+            padding: 72px 0;
+        }
+
+        .case-section + .case-section {
+            border-top: 1px solid #ececec;
+        }
+
+        .case-kicker {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #5b5b5b;
+            margin-bottom: 14px;
+        }
+
+        .case-title {
+            font-size: clamp(2.4rem, 5vw, 4.6rem);
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            margin-bottom: 18px;
+            max-width: 9ch;
+        }
+
+        .case-lead {
+            max-width: 52ch;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: end;
+            min-height: 62vh;
+        }
+
+        .hero-meta {
+            padding: 28px 0 0 0;
+        }
+
+        .meta-list {
+            border-top: 1px solid #e9e9e9;
+            padding-top: 18px;
+        }
+
+        .meta-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid #efefef;
+            font-size: 15px;
+        }
+
+        .meta-item span {
+            color: #777;
+        }
+
+        .meta-item strong {
+            color: #111;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .split-intro {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        .split-intro h2 {
+            font-size: clamp(1.8rem, 3vw, 3rem);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 0;
+            max-width: 10ch;
+        }
+
+        .split-intro p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+        }
+
+        .role-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .role-grid img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .role-copy h3,
+        .timeline-head h3,
+        .insight-head h3,
+        .solution-head h3,
+        .prototype-head h3,
+        .learning-grid h3 {
+            font-size: clamp(1.6rem, 3vw, 2.6rem);
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+        }
+
+        .role-copy p,
+        .role-copy li,
+        .timeline-copy p,
+        .insight-card p,
+        .solution-copy p,
+        .prototype-head p,
+        .learning-grid p {
+            color: #555;
+            line-height: 1.85;
+        }
+
+        .role-copy ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        .timeline-head {
+            max-width: 62ch;
+            margin-bottom: 40px;
+        }
+
+        .timeline-stack {
+            display: grid;
+            gap: 24px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 28px;
+            padding: 28px 0;
+            border-top: 1px solid #ececec;
+        }
+
+        .timeline-item:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .timeline-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #888;
+            padding-top: 4px;
+        }
+
+        .timeline-content {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .timeline-content img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .timeline-copy h5 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .insight-head {
+            max-width: 56ch;
+            margin-bottom: 32px;
+        }
+
+        .insight-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px;
+        }
+
+        .insight-card {
+            border: 1px solid #ececec;
+            border-radius: 8px;
+            padding: 22px;
+            background: #fff;
+        }
+
+        .insight-card.small {
+            grid-column: span 4;
+        }
+
+        .insight-card.large {
+            grid-column: span 6;
+        }
+
+        .insight-card h5 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .solution-head {
+            max-width: 58ch;
+            margin-bottom: 36px;
+        }
+
+        .solution-row.reverse .solution-copy {
+            order: 2;
+        }
+
+        .solution-row.reverse .solution-image {
+            order: 1;
+        }
+
+        .solution-image img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .solution-no {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 12px;
+        }
+
+        .solution-copy h5 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        /* App solution layout */
+        .solution-app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .solution-app-card {
+            border: 1px solid #ececec;
+            border-radius: 16px;
+            padding: 18px 18px 20px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .solution-app-screen {
+            width: 100%;
+            max-width: 260px;          /* 控制橫向大小，看你版面可再調 */
+            margin-inline: auto;
+            border-radius: 18px;
+            background: #f7f7f7;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .solution-app-screen img {
+            width: 100%;
+            height: auto;              /* 讓圖片保持原始比例 */
+            display: block;
+        }
+
+        .solution-app-copy {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .solution-app-copy h5 {
+            font-size: 1.05rem;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        .solution-app-copy p {
+            font-size: 0.96rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* RWD */
+        @media (max-width: 991.98px) {
+            .solution-app-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .solution-app-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Prototype layout */
+        .prototype-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .prototype-head h3 {
+            font-size: clamp(1.6rem, 3vw, 2.6rem);
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+        }
+
+        .prototype-head p {
+            color: #555;
+            line-height: 1.85;
+        }
+
+        /* App flow strip */
+        .prototype-app-flow {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .prototype-step {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .prototype-screen {
+            width: 100%;
+            max-width: 220px;
+            margin-inline: auto;
+            border-radius: 18px;
+            background: #f7f7f7;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prototype-screen img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .prototype-caption {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .prototype-no {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        .prototype-caption p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* User testing block */
+        .prototype-eval {
+            /*border-top: 1px solid #ececec;*/
+            padding-top: 24px;
+        }
+
+        .prototype-eval h6 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #777;
+            margin-bottom: 18px;
+        }
+
+        .prototype-eval-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+
+        .prototype-eval-item h5 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .prototype-eval-item p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .prototype-quote {
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        .prototype-quote-src {
+            display: inline-block;
+            font-style: normal;
+            font-size: 0.85rem;
+            color: #888;
+            margin-left: 4px;
+        }
+
+        /* RWD */
+        @media (max-width: 991.98px) {
+            .prototype-layout {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .prototype-app-flow {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .prototype-eval-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .prototype-app-flow {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/imgs/others/logo.svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="#navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#portfolio">Back to Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="page-shell">
+
+    <!-- HERO -->
+    <section class="case-section">
+        <div class="case-wrap hero-grid">
+            <div>
+                <span class="case-kicker">Industry collaboration case study</span>
+                <h1 class="case-title">Sky Sports – Women’s Football Experience</h1>
+                <p class="case-lead">
+                    Exploring how to make women’s football easier to find, follow and care about on a major sports
+                    platform.
+                </p>
+            </div>
+
+            <div class="hero-meta">
+                <div class="meta-list">
+                    <div class="meta-item">
+                        <span>Duration</span>
+                        <strong>4 weeks</strong>
+                    </div>
+                    <div class="meta-item">
+                        <span>Deliverables</span>
+                        <strong>Current journey, fan insights, concept flows, low-fi prototypes</strong>
+                    </div>
+                    <div class="meta-item">
+                        <span>Role</span>
+                        <strong>UX / Service Designer</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW + CONTEXT -->
+    <section class="case-section">
+        <div class="case-wrap split-intro">
+            <div>
+                <span class="case-kicker">Project overview</span>
+                <h2>Making women’s football more visible, social and easy to follow</h2>
+            </div>
+            <div>
+                <p>
+                    In this four-week collaboration with Sky Sports, our team explored how to improve the digital
+                    experience around women’s football. We focused on three everyday fan problems: keeping track of
+                    matches in busy calendars, watching together with friends even when they cannot meet in person, and
+                    giving women’s football more equitable visibility alongside the men’s game within the Sky Sports
+                    app.
+                </p>
+                <p class="mb-0">
+                    Sky Sports covers a wide range of sports, leagues and competitions. While coverage of women’s
+                    football has grown, fans still told the client that it felt harder to find, follow and return to
+                    compared with the men’s game. Our goal was to focus on a realistic slice of this challenge: the
+                    everyday digital experience of a fan who wants to keep up with women’s football, from finding live
+                    games and highlights to discovering stories and players they care about.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROLE -->
+    <section class="case-section">
+        <div class="case-wrap role-grid">
+            <div>
+                <img src="assets/imgs/IP/IP_GroupPhoto.jpg" alt="Team and client workshop">
+            </div>
+            <div class="role-copy">
+                <span class="case-kicker">Team & My Role</span>
+                <h3>Working with Sky Sports</h3>
+                <p>
+                    We were a small team of UX and service design students, working with tutors and Sky Sports
+                    representatives who joined our check-ins to share feedback and constraints.
+                </p>
+                <ul>
+                    <li>Helped shape our focus around realistic journeys rather than trying to fix everything about
+                        women’s sport.
+                    </li>
+                    <li>Mapped how fans currently navigate to women’s football content across the app and website.</li>
+                    <li>Led the creation of user flows and wireframes to communicate ideas clearly in review sessions.
+                    </li>
+                    <li>Co-presented our final concepts, explaining trade-offs between fan needs and business
+                        priorities.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="timeline-head">
+                <span class="case-kicker">Process</span>
+                <h3>How we approached the brief</h3>
+                <p>
+                    With four weeks and limited direct access to fans, we combined client sessions, light fan research
+                    and journey mapping to move from a broad topic to three concrete experience improvements.
+                </p>
+            </div>
+
+            <div class="timeline-stack">
+                <div class="timeline-item">
+                    <div class="timeline-label">Step 01</div>
+                    <div class="timeline-content">
+                        <div class="timeline-copy">
+                            <h5>Client sessions</h5>
+                            <p>
+                                We started with briefing and Q&amp;A sessions with the Sky Sports team to understand
+                                their goals around women’s football, current coverage and technical constraints. This
+                                helped us narrow the scope to journeys that could realistically be affected in the near
+                                term.
+                            </p>
+                        </div>
+                        <div>
+                            <img class="sky-img" src="assets/imgs/IP/IP_ClientMeeting.png" alt="Client session">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-label">Step 02</div>
+                    <div class="timeline-content align-items-center">
+                        <div class="timeline-copy">
+                            <h5>Fan journeys & scenarios</h5>
+                            <p>
+                                We mapped an end-to-end journey before, during and after the match for women’s football
+                                fans, including searching for match information, adding matches to calendars, watching
+                                live or on catch-up and staying engaged through news and discussions.
+                            </p>
+                            <p class="mb-0">
+                                To bring this to life, we storyboarded scenarios such as Vivian adding a match to her
+                                calendar and receiving a reminder, or Nick noticing a women’s match while checking men’s
+                                results and deciding to watch.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="assets/imgs/IP/IP_UJM2.jpg" alt="User journey for women’s football">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-label">Step 03</div>
+                    <div class="timeline-content">
+                        <div class="timeline-copy">
+                            <h5>Ideation & prototyping</h5>
+                            <p>
+                                Based on these journeys, we clustered opportunity areas and prioritised them using an
+                                impact-effort lens. We then developed low-fidelity storyboards and a clickable prototype
+                                that addressed three key experience gaps: scheduling, social watching and equitable
+                                visibility for women’s football.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="assets/imgs/IP/IP_Wireframes.png" alt="Wireframes and flows">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="insight-head">
+                <span class="case-kicker">Insights</span>
+                <h3>What we discovered</h3>
+            </div>
+
+            <div class="insight-grid">
+                <div class="insight-card small">
+                    <h5>Matches are easy to forget</h5>
+                    <p class="mb-0">
+                        Fans often noticed women’s fixtures but did not have a simple way to add them into their
+                        everyday calendars, which meant matches were easily forgotten or clashed with other plans.
+                    </p>
+                </div>
+
+                <div class="insight-card small">
+                    <h5>Watching together is hard to organise</h5>
+                    <p class="mb-0">
+                        People wanted to share matches with friends and family, but childcare, travel and distance made
+                        physical watch-parties difficult, especially for women’s fixtures.
+                    </p>
+                </div>
+
+                <div class="insight-card small">
+                    <h5>Visibility is uneven</h5>
+                    <p class="mb-0">
+                        Men’s results and stories were more prominent by default; women’s football content was present
+                        but less central, so fans had to work harder to notice and follow it.
+                    </p>
+                </div>
+
+                <div class="insight-card large">
+                    <h5>Journeys are fragmented</h5>
+                    <p class="mb-0">
+                        Fans stitched together their experience across apps, social media and TV, which made it harder
+                        to maintain a consistent relationship with women’s football on Sky.
+                    </p>
+                </div>
+
+                <div class="insight-card large">
+                    <h5>Small changes can shift perception</h5>
+                    <p class="mb-0">
+                        Equal placement for men’s and women’s teams, plus simple prompts and reminders, could help
+                        normalise women’s football as an integral part of the club ecosystem rather than an add-on.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="solution-head">
+                <span class="case-kicker">Solution snapshots</span>
+                <h3>Key features we proposed</h3>
+                <p class="mb-0">
+                    Our final concept combined three features: streamlining match scheduling, enabling remote watch-parties,
+                    and giving women’s football more equitable visibility next to the men’s game.
+                </p>
+            </div>
+
+            <!-- App-screen style layout -->
+            <div class="solution-app-grid">
+
+                <!-- 01 Visibility -->
+                <article class="solution-app-card">
+                    <div class="solution-app-screen">
+                        <img src="assets/imgs/IP/IP_MyTeam.jpg"
+                             alt="App screen – equitable visibility">
+                    </div>
+                    <div class="solution-app-copy">
+                        <span class="solution-no">01</span>
+                        <h5>Equitable visibility for women’s football</h5>
+                        <p class="mb-0">
+                            The “My Team” and news views present men’s and women’s teams side by side, showing both results
+                            and upcoming fixtures in one place. This normalises women’s football as part of the same club
+                            ecosystem and encourages fans to engage with both.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 02 Calendar -->
+                <article class="solution-app-card">
+                    <div class="solution-app-screen">
+                        <img src="assets/imgs/IP/IP_Calendar.png"
+                             alt="App screen – add match to calendar">
+                    </div>
+                    <div class="solution-app-copy">
+                        <span class="solution-no">02</span>
+                        <h5>Streamlining match scheduling</h5>
+                        <p class="mb-0">
+                            Fans can add women’s (and men’s) matches directly from the Sky Sports app into their personal
+                            calendar with a single tap, then receive timely reminders on match day so they do not miss games
+                            they care about.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 03 Live chat -->
+                <article class="solution-app-card">
+                    <div class="solution-app-screen">
+                        <img src="assets/imgs/IP/IP_ChatRooms.jpg"
+                             alt="App screen – live chat room">
+                    </div>
+                    <div class="solution-app-copy">
+                        <span class="solution-no">03</span>
+                        <h5>Watching together from anywhere</h5>
+                        <p class="mb-0">
+                            A “Live Chat Room” feature lets fans invite friends to watch the same match and talk together in
+                            a shared space, even when they cannot meet in person, turning women’s fixtures into more social
+                            moments.
+                        </p>
+                    </div>
+                </article>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROTOTYPE -->
+    <section class="case-section">
+        <div class="case-wrap prototype-layout">
+            <!-- 左欄：文字說明 -->
+            <div class="prototype-head">
+                <span class="case-kicker">Prototype</span>
+                <h3>Bringing the flows to life</h3>
+                <p>
+                    We built a mobile prototype in Figma to demonstrate the key flows: checking “My Team” for women’s fixtures,
+                    adding a match to the calendar, joining a live chat room and watching in a private room with friends.
+                </p>
+                <p class="mb-0">
+                    In our final presentation to Sky Sports, we used the prototype to walk through the experience from a fan’s
+                    point of view and discuss how these ideas could fit into their roadmap.
+                </p>
+            </div>
+
+            <!-- 右欄：App flow + user feedback -->
+            <div>
+                <!-- App flow strip -->
+                <div class="prototype-app-flow">
+                    <article class="prototype-step">
+                        <div class="prototype-screen">
+                            <img src="assets/imgs/IP/IP_MyTeam.jpg" alt="My Team prototype screen">
+                        </div>
+                        <div class="prototype-caption">
+                            <span class="prototype-no">01</span>
+                            <p class="mb-0">Fans start from “My Team” to see both men’s and women’s fixtures in one place.</p>
+                        </div>
+                    </article>
+
+                    <article class="prototype-step">
+                        <div class="prototype-screen">
+                            <img src="assets/imgs/IP/IP_AddCalendar.jpg" alt="Schedule prototype screen">
+                        </div>
+                        <div class="prototype-caption">
+                            <span class="prototype-no">02</span>
+                            <p class="mb-0">From a selected match, they can add it directly to their personal calendar.</p>
+                        </div>
+                    </article>
+
+                    <article class="prototype-step">
+                        <div class="prototype-screen">
+                            <img src="assets/imgs/IP/IP_Friends.jpg" alt="Live chat room prototype screen">
+                        </div>
+                        <div class="prototype-caption">
+                            <span class="prototype-no">03</span>
+                            <p class="mb-0">When the game starts, they join a live chat room to watch and react with friends.</p>
+                        </div>
+                    </article>
+
+                    <article class="prototype-step">
+                        <div class="prototype-screen">
+                            <img src="assets/imgs/IP/IP_ChatRoom.png" alt="Private room prototype screen">
+                        </div>
+                        <div class="prototype-caption">
+                            <span class="prototype-no">04</span>
+                            <p class="mb-0">For smaller groups, a private room keeps the conversation focused on their own circle.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK USER FEEDBACK -->
+    <section class="case-section">
+        <div class="case-wrap prototype-eval">
+            <h6>Quick user feedback</h6>
+
+            <div class="prototype-eval-row">
+                <div class="prototype-eval-item">
+                    <h5>Calendar felt the most useful</h5>
+                    <p class="mb-1">
+                        Participants saw the “add to calendar” feature as the most immediately helpful part of the concept.
+                    </p>
+                    <p class="prototype-quote">
+                        “I literally forget the kick-off times sometimes... this also creates a sense of anticipation!”
+                        <span class="prototype-quote-src">P01, P02</span>
+                    </p>
+                </div>
+
+                <div class="prototype-eval-item">
+                    <h5>Smaller live chat rooms felt more comfortable</h5>
+                    <p class="mb-1">
+                        People preferred watching matches with a small, close group rather than a large public room.
+                    </p>
+                    <p class="prototype-quote">
+                        “I prefer to enjoy the game with the people closest to me, like my family or friends.”
+                        <span class="prototype-quote-src">P01, P02</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="prototype-eval-row">
+                <div class="prototype-eval-item">
+                    <h5>Equal space for women’s football was appreciated</h5>
+                    <p class="mb-0">
+                        Participants were glad to see women’s football content given equal space to men’s on the “My Team” page,
+                        making it feel less like an add-on and more like a default part of the club experience.
+                    </p>
+                </div>
+
+                <div class="prototype-eval-item">
+                    <h5>Reward system moved to a later phase</h5>
+                    <p class="mb-1">
+                        We decided to move the reward system and physical events into a later phase, as they would resonate more
+                        with users who had already become women’s football fans.
+                    </p>
+                    <p class="prototype-quote">
+                        “I think the game-watching invite is enough.”<br>
+                        “But I’d love to see warm-up activities before the season! We don’t have anything like that right now.”
+                        <span class="prototype-quote-src">P01, P02</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section class="case-section">
+        <div class="case-wrap learning-grid">
+            <div>
+                <span class="case-kicker">Outcomes</span>
+                <h3>What this collaboration gave us</h3>
+                <p>
+                    For Sky, our work provided a clearer picture of how women’s football currently appears in their
+                    digital experience and a set of concrete ideas that could be explored further. For me, it was a
+                    chance to connect my interest in women’s sport with practical UX and service design work.
+                </p>
+                <ul>
+                    <li>Delivered an as-is set of fan journeys and experience maps focused on women’s football
+                        discovery.
+                    </li>
+                    <li>Provided user flows and wireframes that made it easier to discuss trade-offs between visibility,
+                        space and complexity.
+                    </li>
+                    <li>Received encouraging feedback from the client about the clarity of our storytelling in the final
+                        presentation.
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="case-kicker">Learning</span>
+                <h3>What I learned</h3>
+                <p>
+                    This project helped me practise turning a broad cultural issue into a focused product opportunity.
+                </p>
+                <ul>
+                    <li>How to quickly align a design team around a focused slice of a broad, emotionally charged topic
+                        like women’s sport.
+                    </li>
+                    <li>The importance of balancing ambition with what can realistically be implemented in the short
+                        term.
+                    </li>
+                    <li>How to use journeys, flows and low-fi prototypes to turn abstract goals like visibility into
+                        specific interaction changes.
+                    </li>
+                    <li>That I am particularly motivated by projects that mix media, sport and representation, and I
+                        enjoy turning that passion into structured, evidence-based design work.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-6">
+                <p>
+                    &copy;
+                    <script>document.write(new Date().getFullYear())</script>
+                    Ella Hung
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="socials">
+                    <a class="social-item" href="https://www.linkedin.com/in/ellahung" target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="ti-linkedin"></i>
+                    </a>
+                    <a class="social-item" href="https://github.com/ellahung" target="_blank" rel="noopener noreferrer">
+                        <i class="ti-github"></i>
+                    </a>
+                    <a class="social-item" href="mailto:hungella93@gmail.com">
+                        <i class="ti-email"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+<script src="assets/js/steller.js"></script>
+
+</body>
+</html>
