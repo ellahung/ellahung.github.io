@@ -417,50 +417,73 @@
         }
 
         /* User testing block */
+        /* QUICK USER FEEDBACK section */
+        /* 區塊本身：維持乾淨陳列 */
         .prototype-eval {
-            /*border-top: 1px solid #ececec;*/
-            padding-top: 24px;
+            max-width: 1120px;
+            margin-inline: auto;
         }
 
         .prototype-eval h6 {
             font-size: 0.9rem;
             font-weight: 600;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            color: #777;
-            margin-bottom: 18px;
+            color: #999;
+            margin-bottom: 16px;
         }
 
         .prototype-eval-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
             margin-bottom: 20px;
         }
 
         .prototype-eval-item h5 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-size: 1.02rem;
+            font-weight: 650;
+            margin-bottom: 4px;
+            color: #222;
         }
 
         .prototype-eval-item p {
             color: #555;
             line-height: 1.7;
+            font-size: 0.94rem;
         }
 
-        .prototype-quote {
-            font-size: 0.95rem;
+        /* 對話框式 quote：只有有 quote 的才用這個 class */
+        .prototype-quote-bubble {
+            position: relative;
+            margin-top: 10px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: #f6f6f6;
+            font-size: 0.9rem;
+            line-height: 1.6;
             font-style: italic;
-            margin-bottom: 0;
+            color: #666;
+        }
+
+        .prototype-quote-bubble::before {
+            content: "";
+            position: absolute;
+            left: 18px;
+            top: -6px;
+            border-width: 0 8px 8px 8px;
+            border-style: solid;
+            border-color: transparent transparent #f6f6f6 transparent;
         }
 
         .prototype-quote-src {
             display: inline-block;
             font-style: normal;
-            font-size: 0.85rem;
-            color: #888;
+            font-size: 0.78rem;
+            color: #999;
             margin-left: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
         }
 
         /* RWD */
@@ -483,6 +506,45 @@
             .prototype-app-flow {
                 grid-template-columns: 1fr 1fr;
                 gap: 12px;
+            }
+        }
+
+        .future-plan {
+            max-width: 1120px;          /* 跟 prototype-eval 一致 */
+            margin-inline: auto;
+        }
+
+        .future-plan h6 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 16px;
+        }
+
+        .future-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .future-item h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #222;
+        }
+
+        .future-item p {
+            font-size: 0.94rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        @media (max-width: 991.98px) {
+            .future-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -867,8 +929,11 @@
 
     <!-- QUICK USER FEEDBACK -->
     <section class="case-section">
-        <div class="case-wrap prototype-eval">
-            <h6>Quick user feedback</h6>
+        <div class="case-wrap">
+            <div class="prototype-head">
+                <span class="case-kicker">User Testing</span>
+                <h3>Quick user feedback</h3>
+            </div>
 
             <div class="prototype-eval-row">
                 <div class="prototype-eval-item">
@@ -876,7 +941,7 @@
                     <p class="mb-1">
                         Participants saw the “add to calendar” feature as the most immediately helpful part of the concept.
                     </p>
-                    <p class="prototype-quote">
+                    <p class="prototype-quote-bubble">
                         “I literally forget the kick-off times sometimes... this also creates a sense of anticipation!”
                         <span class="prototype-quote-src">P01, P02</span>
                     </p>
@@ -887,7 +952,7 @@
                     <p class="mb-1">
                         People preferred watching matches with a small, close group rather than a large public room.
                     </p>
-                    <p class="prototype-quote">
+                    <p class="prototype-quote-bubble">
                         “I prefer to enjoy the game with the people closest to me, like my family or friends.”
                         <span class="prototype-quote-src">P01, P02</span>
                     </p>
@@ -909,11 +974,38 @@
                         We decided to move the reward system and physical events into a later phase, as they would resonate more
                         with users who had already become women’s football fans.
                     </p>
-                    <p class="prototype-quote">
+                    <p class="prototype-quote-bubble">
                         “I think the game-watching invite is enough.”<br>
                         “But I’d love to see warm-up activities before the season! We don’t have anything like that right now.”
                         <span class="prototype-quote-src">P01, P02</span>
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUTURE ROADMAP（新加的 section） -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="prototype-head">
+                <span class="case-kicker">Future</span>
+                <h3>Three years plan</h3>
+            </div>
+
+            <div class="future-grid">
+                <div class="future-item">
+                    <h5>Year 1 – Strengthen the core experience</h5>
+                    <p>Focus on the “My Team” calendar, visibility of women’s fixtures, and small-group live chat as the default way to watch together.</p>
+                </div>
+
+                <div class="future-item">
+                    <h5>Year 2 – Introduce a light reward system</h5>
+                    <p>Experiment with simple in-app rewards linked to watching matches, interacting in chat, and inviting friends.</p>
+                </div>
+
+                <div class="future-item">
+                    <h5>Year 3 – Connect rewards to real-world events</h5>
+                    <p>Gradually add physical rewards and events that target users who have already become regular women’s football fans.</p>
                 </div>
             </div>
         </div>
