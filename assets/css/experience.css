@@ -1,0 +1,234 @@
+/* —— ED hero：背景圖 —— */
+
+.case-hero.case-hero-ed::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../assets/imgs/ed/ed-hero.png") center right / cover no-repeat;
+    opacity: 0.9;
+    z-index: 0;
+}
+
+.case-hero.case-hero-ed::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1; /* 不加顏色，只是保留一層，之後要加 gradient 也方便 */
+}
+
+/* 右半邊 hero device（整塊大圖） */
+
+.hero-device {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    min-height: 480px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}
+
+.hero-device img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
+}
+
+/* 如果 hero-device 裡放的是 process 圖，而不是 hero 大圖 */
+.hero-device img.process-img {
+    max-width: 960px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* —— Info row：ED 用 1 / 1.4 / 1 分欄 —— */
+
+.case-info-row {
+    padding: 28px 0 24px;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #f2f2f2;
+    background: #ffffff;
+}
+
+.info-row-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    gap: 32px;
+    font-size: 0.9rem;
+}
+
+/* —— Vision & principles —— */
+
+.vision-box {
+    border-radius: 14px;
+    border: 1px solid #ececec;
+    padding: 20px 22px;
+    background: #fafafa;
+}
+
+.vision-box h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.vision-box p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.principle-card {
+    border-radius: 12px;
+    border: 1px solid #ececec;
+    padding: 16px 16px 18px;
+    background: #fff;
+}
+
+.principle-card h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.principle-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* —— Concept sections：左圖右文 —— */
+
+.solution-head {
+    max-width: 58ch;
+    margin-bottom: 36px;
+}
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* 手機 mockup 區，之後你可以再改成 card 版 */
+.hero-shot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+}
+
+.hero-shot img {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 32px;
+    border: none;
+    /* 如要陰影可開啟：
+       box-shadow: 0 18px 40px rgba(0,0,0,0.14);
+    */
+}
+
+.concept-copy h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.concept-copy p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+/* tag pills */
+.pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.pill {
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid #e0e0e0;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #777;
+}
+
+/* —— Layouts：evaluation & learning —— */
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.list-tight li {
+    margin-bottom: 4px;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* —— RWD for ED —— */
+
+@media (max-width: 991.98px) {
+
+    .hero-device {
+        min-height: 260px;
+        border-radius: 18px;
+    }
+
+    .hero-device img {
+        object-position: center top;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .concept-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hero-shot img {
+        width: 220px;
+    }
+
+    .two-col,
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-row-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .principles-grid,
+    .info-row-inner {
+        grid-template-columns: 1fr;
+    }
+}
