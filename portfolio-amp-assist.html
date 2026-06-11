@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Amp Assist UXathon case study – Ella Hung.">
+    <meta name="author" content="Ella Hung">
+    <title>Amp Assist – UXathon – Ella Hung</title>
+
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/steller.css">
+
+    <style>
+        body {
+            background: #fff;
+        }
+
+        .page-shell {
+            padding-top: 90px;
+        }
+
+        .case-wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .case-section {
+            padding: 72px 0;
+        }
+
+        .case-section + .case-section {
+            border-top: 1px solid #ececec;
+        }
+
+        .case-kicker {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #5b5b5b;
+            margin-bottom: 14px;
+        }
+
+        .case-title {
+            font-size: clamp(2.6rem, 5vw, 4.4rem);
+            line-height: 1.02;
+            letter-spacing: -0.04em;
+            margin-bottom: 18px;
+            max-width: 10ch;
+        }
+
+        .case-lead {
+            max-width: 52ch;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .split-intro {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        .split-intro h2 {
+            font-size: clamp(1.9rem, 3vw, 2.6rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 0;
+            max-width: 12ch;
+        }
+
+        .split-intro p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            font-size: 0.97rem;
+        }
+
+        .role-grid {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .role-grid img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .role-copy h3,
+        .timeline-head h3,
+        .solution-head h3,
+        .learning-grid h3 {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+        }
+
+        .role-copy p,
+        .role-copy li,
+        .timeline-head p,
+        .timeline-copy p,
+        .solution-head p,
+        .solution-app-copy p,
+        .learning-grid p,
+        .learning-grid li {
+            color: #555;
+            line-height: 1.85;
+            font-size: 0.95rem;
+        }
+
+        .role-copy ul,
+        .learning-grid ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        /* HERO WITH BACKGROUND */
+
+        .case-hero {
+            position: relative;
+            padding: 80px 0 96px;
+            color: #111;
+            overflow: hidden;
+        }
+
+        .case-hero.case-hero-amp::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("assets/imgs/AMP/AMP-Hero.png") center right / cover no-repeat;
+            opacity: 0.8; /* 調整背景強度 */
+            z-index: 0;
+        }
+
+        .case-hero.case-hero-amp::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                    to right,
+                    rgba(255,255,255,0.96) 0%,
+                    rgba(255,255,255,0.75) 40%,
+                    rgba(255,255,255,0.35) 75%,
+                    rgba(255,255,255,0.2) 100%
+            );
+            z-index: 1;
+        }
+
+        .case-hero .case-wrap {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-main {
+            max-width: 560px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-award {
+            margin-top: 10px;
+            font-size: 0.82rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #999;
+        }
+
+        /* INFO ROW */
+
+        .case-info-row {
+            padding-top: 32px;
+            padding-bottom: 24px;
+            border-top: 1px solid #ececec;
+            border-bottom: 1px solid #f2f2f2;
+            background: #ffffff;
+        }
+
+        .info-row-inner {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 32px;
+            font-size: 0.9rem;
+        }
+
+        .meta-block {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .meta-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #999;
+        }
+
+        .meta-value {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* PROCESS / TIMELINE */
+
+        .timeline-head {
+            max-width: 62ch;
+            margin-bottom: 40px;
+        }
+
+        .timeline-stack {
+            display: grid;
+            gap: 24px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 28px;
+            padding: 28px 0;
+            border-top: 1px solid #ececec;
+        }
+
+        .timeline-item:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .timeline-label {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #888;
+            padding-top: 4px;
+        }
+
+        .timeline-content {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .timeline-content img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .timeline-copy h5 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        /* KEY SCREENS – reuse app layout */
+
+        .solution-head {
+            max-width: 58ch;
+            margin-bottom: 36px;
+        }
+
+        .solution-app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .solution-app-card {
+            border: 1px solid #ececec;
+            border-radius: 16px;
+            padding: 18px 18px 20px;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .solution-app-screen {
+            width: 100%;
+            max-width: 520px;
+            margin-inline: auto;
+            border-radius: 18px;
+            background: #f7f7f7;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .solution-app-screen img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .solution-app-copy {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        /* Amp key screens: 2-column web layout */
+        .solution-app-grid-amp {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 28px;
+        }
+
+        @media (max-width: 991.98px) {
+            .solution-app-grid-amp {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .solution-no {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        .solution-app-copy h5 {
+            font-size: 1.05rem;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        /* OUTCOME & LEARNING */
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .learning-grid h3 {
+            margin-bottom: 16px;
+        }
+
+        .learning-grid p {
+            margin-bottom: 1rem;
+        }
+
+        /* RWD */
+
+        @media (max-width: 991.98px) {
+            .split-intro {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .role-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-content {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-app-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-row-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .solution-app-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-section {
+                padding: 56px 0;
+            }
+
+            .page-shell {
+                padding-top: 72px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/imgs/others/logo.svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="#navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#portfolio">Back to Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="page-shell">
+
+    <!-- HERO -->
+    <section class="case-section case-hero case-hero-amp">
+        <div class="case-wrap">
+            <div class="hero-main">
+                <span class="case-kicker">One‑day UXathon case study</span>
+                <h1 class="case-title">Amp Assist – Unified EV Support Experience</h1>
+                <p class="case-lead">
+                    Designing a more coherent AI‑enabled support experience that connects charge point operators and EV drivers.
+                </p>
+                <p class="hero-award">
+                    Award: Best Client Relationship – UXathon 2025
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO ROW -->
+    <section class="case-section case-info-row">
+        <div class="case-wrap info-row-inner">
+            <div class="meta-block">
+                <span class="meta-label">Duration</span>
+                <div class="meta-value">1 day (UXathon)</div>
+            </div>
+            <div class="meta-block">
+                <span class="meta-label">Team</span>
+                <div class="meta-value">4 UX / UI designers + mentor</div>
+            </div>
+            <div class="meta-block">
+                <span class="meta-label">My role</span>
+                <div class="meta-value">Client communication & problem framing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="case-section">
+        <div class="case-wrap split-intro">
+            <div>
+                <span class="case-kicker">Project overview</span>
+                <h2>From fragmented tools to a cohesive support journey</h2>
+            </div>
+            <div>
+                <p>
+                    Amp Assist is an AI‑native BPO working with charge point operators (CPOs) to monitor EV charging networks and support drivers when charging sessions fail.
+                    Their two products – Amp Pulse for operations and Amp Nexus for customer support – had grown quickly, but the experience felt fragmented for both teams and drivers.
+                </p>
+                <p class="mb-0">
+                    In a one‑day UXathon, our team was asked to imagine how these tools could feel like one unified service.
+                    We focused on connecting back‑office monitoring with frontline driver support, so that failed sessions could be detected, resolved and learned from more seamlessly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM & ROLE -->
+    <section class="case-section">
+        <div class="case-wrap role-grid">
+            <div>
+                <img src="assets/imgs/AMP/AMP-GroupL.jpg" alt="Amp Assist UXathon team">
+            </div>
+            <div class="role-copy">
+                <span class="case-kicker">Team & My role</span>
+                <h3>Keeping the client and team aligned</h3>
+                <p>
+                    Our team of four worked with a remote client and mentor in a compressed timeframe, balancing ambition with what we could realistically prototype in one day.
+                    We needed a clear problem frame and fast feedback loops to make the most of the UXathon.
+                </p>
+                <ul>
+                    <li>Set up a shared question log so we could continuously clarify the brief and document decisions with the client.</li>
+                    <li>Helped articulate a B2B2C framing that linked CPO operations and EV driver support into one journey.</li>
+                    <li>Turned the refined problem statement into prioritised flows for the dashboard and call log views.</li>
+                    <li>Co‑presented the final concept and how it could fit into Amp Assist’s existing products.</li>
+                </ul>
+                <p class="mb-0">
+                    Our team received the <strong>Best Client Relationship</strong> award for the way we managed expectations and kept communication open throughout the sprint.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="timeline-head">
+                <span class="case-kicker">Process</span>
+                <h3>How we used the UXathon day</h3>
+                <p>
+                    With one day and a pre‑reading window, we combined async questions, mentoring and rapid prototyping
+                    to move from a broad B2B2C brief to a focused concept around dashboards and call intelligence.
+                </p>
+            </div>
+
+            <div class="timeline-stack">
+                <!-- Step 01 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">Before the day</div>
+                    <div class="timeline-content">
+                        <div class="timeline-copy">
+                            <h5>Clarifying the brief</h5>
+                            <p>
+                                Ahead of the UXathon, I opened a shared question document and Slack thread to capture everything we did not understand about the two products, current workflows and success metrics.
+                                This helped us agree with the client that we would focus on CPO‑facing tooling rather than driver apps.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="assets/imgs/AMP/AMP-ClientMeeting.png" alt="Question log for Amp Assist">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 02 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">Morning</div>
+                    <div class="timeline-content">
+                        <div class="timeline-copy">
+                            <h5>Framing a B2B2C journey</h5>
+                            <p>
+                                With our mentor, we mapped how an incident travels from the charger to operations and then to the driver.
+                                This B2B2C view helped us see where Pulse and Nexus overlapped, and where a unified dashboard and call log could reduce hand‑offs.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="assets/imgs/AMP/AMP-ServiceBluePrint.png" alt="B2B2C journey sketch">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 03 -->
+                <div class="timeline-item">
+                    <div class="timeline-label">Afternoon</div>
+                    <div class="timeline-content">
+                        <div class="timeline-copy">
+                            <h5>Prototyping key screens</h5>
+                            <p>
+                                Once the scope was clear, we split work across a unified service dashboard and an AI‑augmented call log.
+                                While teammates focused on UI, I kept checking flows against the agreed problem statement and collected last‑minute feedback from the client.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="assets/imgs/AMP/AMP-Prototype.png" alt="Amp Assist low‑fi prototypes">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEY SCREENS -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="solution-head">
+                <span class="case-kicker">Key interventions</span>
+                <h3>What we prototyped in a day</h3>
+                <p class="mb-0">
+                    We focused on evolving Amp Assist’s existing web console with a few targeted changes, rather than redesigning the platform from scratch.
+                </p>
+            </div>
+
+            <div class="solution-app-grid-amp">
+                <!-- 01 Unified web dashboard -->
+                <article class="solution-app-card">
+                    <div class="solution-app-screen">
+                        <img src="assets/imgs/AMP/AMP-Dashboard.jpg" alt="Amp Assist unified web dashboard">
+                    </div>
+                    <div class="solution-app-copy">
+                        <span class="solution-no">01</span>
+                        <h5>Unifying Pulse and Nexus in one web dashboard</h5>
+                        <p class="mb-0">
+                            We combined operational KPIs and support metrics into a single overview page, so CPO teams can monitor charger health,
+                            incident volume and AI performance without jumping between separate tools.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 02 Web call log -->
+                <article class="solution-app-card">
+                    <div class="solution-app-screen">
+                        <img src="assets/imgs/AMP/AMP-Calls.png" alt="Amp Assist web call log with filters">
+                    </div>
+                    <div class="solution-app-copy">
+                        <span class="solution-no">02</span>
+                        <h5>Turning the call log into an intelligence view</h5>
+                        <p class="mb-0">
+                            On the calls page, we introduced a persistent filter bar and clearer grouping by outcome, topic and sentiment,
+                            so support leads can quickly answer questions like “Which errors create the most frustrated drivers?” directly from the web console.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTCOME & LEARNING -->
+    <section class="case-section">
+        <div class="case-wrap learning-grid">
+            <div>
+                <span class="case-kicker">Outcome</span>
+                <h3>What we delivered in the UXathon</h3>
+                <p>
+                    We handed over a clickable prototype, journey sketches and a short presentation that showed how a unified
+                    dashboard and call experience could make Amp Assist’s BPO feel more cohesive for CPOs.
+                </p>
+                <ul>
+                    <li>Aligned with the client on a realistic scope and a B2B2C framing before the UXathon day.</li>
+                    <li>Produced key flows and UI for a unified dashboard and call log within the one‑day sprint.</li>
+                    <li>Received the <strong>Best Client Relationship</strong> award from the organisers.</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="case-kicker">What I learned</span>
+                <h3>Practising fast, relationship‑driven design</h3>
+                <p>
+                    This project was a good reminder that even in a hackathon, communication can be as important as pixels.
+                </p>
+                <ul class="mb-0">
+                    <li>How to use a simple question log to keep clients, mentors and teammates aligned under time pressure.</li>
+                    <li>How a clear B2B2C framing can keep UI decisions grounded in the end‑to‑end service.</li>
+                    <li>How to prioritise a few high‑impact interventions instead of trying to redesign an entire platform in a day.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-6">
+                <p>
+                    &copy;
+                    <script>document.write(new Date().getFullYear())</script>
+                    Ella Hung
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="socials">
+                    <a class="social-item" href="https://www.linkedin.com/in/ellahung" target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="ti-linkedin"></i>
+                    </a>
+                    <a class="social-item" href="https://github.com/ellahung" target="_blank" rel="noopener noreferrer">
+                        <i class="ti-github"></i>
+                    </a>
+                    <a class="social-item" href="mailto:hungella93@gmail.com">
+                        <i class="ti-email"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+<script src="assets/js/steller.js"></script>
+
+</body>
+</html>
