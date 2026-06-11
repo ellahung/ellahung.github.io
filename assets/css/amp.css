@@ -1,0 +1,194 @@
+/* AMP 專用 hero 背景圖與遮罩 */
+.case-hero.case-hero-amp::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../assets/imgs/AMP/AMP-Hero.png") center right / cover no-repeat;
+    opacity: 0.8; /* 背景強度 */
+    z-index: 0;
+}
+
+.case-hero.case-hero-amp::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            to right,
+            rgba(255,255,255,0.96) 0%,
+            rgba(255,255,255,0.75) 40%,
+            rgba(255,255,255,0.35) 75%,
+            rgba(255,255,255,0.2) 100%
+    );
+    z-index: 1;
+}
+
+/* hero 裡的小獎項文字 */
+.hero-award {
+    margin-top: 10px;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+}
+
+/* TIMELINE：AMP 和 Industry 類似，但如果只有 AMP 用這套，就放在這裡 */
+.timeline-head {
+    max-width: 62ch;
+    margin-bottom: 40px;
+}
+
+.timeline-stack {
+    display: grid;
+    gap: 24px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 28px;
+    padding: 28px 0;
+    border-top: 1px solid #ececec;
+}
+
+.timeline-item:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.timeline-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+    padding-top: 4px;
+}
+
+.timeline-content {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.timeline-content img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.timeline-copy h5 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* KEY SCREENS – AMP 用的 app layout */
+.solution-head {
+    max-width: 58ch;
+    margin-bottom: 36px;
+}
+
+/* 三欄手機卡片（共用），如果之後 Industry / ED 也用，可以移回 case.css */
+.solution-app-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.solution-app-card {
+    border: 1px solid #ececec;
+    border-radius: 16px;
+    padding: 18px 18px 20px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.solution-app-screen {
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+    border-radius: 18px;
+    background: #f7f7f7;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution-app-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.solution-app-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.solution-no {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.solution-app-copy h5 {
+    font-size: 1.05rem;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+/* AMP 專用：有些 key screens 用 2-column web layout */
+.solution-app-grid-amp {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+/* OUTCOME & LEARNING（AMP 用的兩欄 layout） */
+.learning-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* RWD：AMP 頁面自己的調整 */
+@media (max-width: 991.98px) {
+    .timeline-item {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-content {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-app-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .solution-app-grid-amp {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-row-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .solution-app-grid {
+        grid-template-columns: 1fr;
+    }
+}

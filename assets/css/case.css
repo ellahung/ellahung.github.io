@@ -1,0 +1,199 @@
+.page-shell {
+    padding-top: 90px;          /* Industry 那頁額外再 override 就好 */
+}
+
+/* 2. 最大寬與 section 間距 */
+.case-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.case-section {
+    padding: 72px 0;
+}
+
+.case-section + .case-section {
+    border-top: 1px solid #ececec;
+}
+
+/* 3. 小標、標題、lead 文 */
+.case-kicker {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5b5b5b;
+    margin-bottom: 14px;
+}
+
+.case-title {
+    font-size: clamp(2.4rem, 5vw, 4.6rem);  /* 取三頁的中間值 */
+    line-height: 1.03;
+    letter-spacing: -0.04em;
+    margin-bottom: 18px;
+    max-width: 10ch;
+}
+
+.case-lead {
+    max-width: 52ch;
+    font-size: 1.03rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* 4. 通用 split-intro 兩欄 layout */
+.split-intro {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 56px;
+    align-items: start;
+}
+
+.split-intro h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 0;
+    max-width: 12ch;
+}
+
+.split-intro p {
+    color: #555;
+    font-size: 0.97rem;
+    line-height: 1.9;
+    margin-bottom: 1rem;
+}
+
+/* 5. 通用 role-grid 兩欄 layout */
+.role-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.role-grid img {
+    width: 100%;
+    border-radius: 8px;   /* Experience 可以再覆寫成 10px */
+    object-fit: cover;
+}
+
+/* 6. 共同的 h3 標題樣式 */
+.role-copy h3,
+.timeline-head h3,
+.solution-head h3,
+.insight-head h3,
+.prototype-head h3,
+.learning-grid h3 {
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 18px;
+}
+
+/* 7. 共同 paragraph / list 樣式 */
+.role-copy p,
+.role-copy li,
+.timeline-head p,
+.timeline-copy p,
+.solution-head p,
+.solution-copy p,
+.solution-app-copy p,
+.prototype-head p,
+.insight-card p,
+.learning-grid p,
+.learning-grid li {
+    color: #555;
+    line-height: 1.85;
+    font-size: 0.95rem;
+}
+
+.role-copy ul,
+.learning-grid ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+}
+
+/* 8. 通用 hero 結構（不含背景圖） */
+.case-hero {
+    position: relative;
+    padding: 80px 0 96px;
+    color: #111;
+    overflow: hidden;
+}
+
+.case-hero .case-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-main {
+    max-width: 560px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 9. 通用 info row 架構 */
+.case-info-row {
+    padding: 28px 0 24px;
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #f2f2f2;
+    background: #ffffff;
+}
+
+.info-row-inner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    font-size: 0.9rem;
+}
+
+.meta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.meta-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.meta-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 10. 通用 RWD */
+@media (max-width: 991.98px) {
+    .split-intro,
+    .role-grid,
+    .learning-grid,
+    .two-col {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .info-row-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .case-section {
+        padding: 56px 0;
+    }
+
+    .page-shell {
+        padding-top: 72px;
+    }
+}

@@ -10925,6 +10925,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   body {
     min-width: 992px !important;
+    background: #fff;
   }
   .container {
     min-width: 992px !important;
