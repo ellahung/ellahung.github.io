@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Experience Design module app project – Ella Hung.">
+    <meta name="author" content="Ella Hung">
+    <title>Energy Diary App – Ella Hung</title>
+
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/steller.css">
+
+    <style>
+        body {
+            background: #fff;
+        }
+
+        .page-shell {
+            padding-top: 90px;
+        }
+
+        .case-wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .case-section {
+            padding: 72px 0;
+        }
+
+        .case-section + .case-section {
+            border-top: 1px solid #ececec;
+        }
+
+        .case-kicker {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #5b5b5b;
+            margin-bottom: 14px;
+        }
+
+        .case-title {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1.04;
+            letter-spacing: -0.04em;
+            margin-bottom: 18px;
+            max-width: 10ch;
+        }
+
+        .case-lead {
+            max-width: 52ch;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .split-intro {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        .split-intro h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 0;
+            max-width: 12ch;
+        }
+
+        .split-intro p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 1rem;
+            font-size: 0.97rem;
+        }
+
+        .role-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .role-grid img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .role-copy h3,
+        .timeline-head h3,
+        .solution-head h3,
+        .learning-grid h3 {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+            margin-bottom: 18px;
+        }
+
+        .role-copy p,
+        .role-copy li,
+        .timeline-head p,
+        .timeline-copy p,
+        .solution-head p,
+        .learning-grid p,
+        .learning-grid li {
+            color: #555;
+            line-height: 1.85;
+            font-size: 0.95rem;
+        }
+
+        .role-copy ul,
+        .learning-grid ul {
+            padding-left: 18px;
+            margin-bottom: 0;
+        }
+
+        /* HERO */
+        .case-hero {
+            position: relative;
+            padding: 80px 0 96px;
+            color: #111;
+            overflow: hidden;
+        }
+
+        .case-hero .case-wrap {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-main {
+            max-width: 560px;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .case-hero.case-hero-ed::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("assets/imgs/ed/ed-hero.png") center right / cover no-repeat;
+            opacity: 0.9; /* 可依自己感覺調整 0.7–1 之間 */
+            z-index: 0;
+        }
+
+        .case-hero.case-hero-ed::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        /* 右半邊整塊 hero 圖 */
+        .hero-device {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            min-height: 480px;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+        }
+
+        .hero-device img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;      /* 讓圖自己裁切填滿 */
+            object-position: center;
+            border-radius: 0;
+            box-shadow: none;
+            max-width: none;
+        }
+
+        /* INFO ROW */
+
+        .case-info-row {
+            padding: 28px 0 24px;
+            border-top: 1px solid #ececec;
+            border-bottom: 1px solid #f2f2f2;
+            background: #ffffff;
+        }
+
+        .info-row-inner {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr 1fr;
+            gap: 32px;
+            font-size: 0.9rem;
+        }
+
+        .meta-block {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .meta-label {
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #999;
+        }
+
+        .meta-value {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* VISION & PRINCIPLES */
+
+        .vision-box {
+            border-radius: 14px;
+            border: 1px solid #ececec;
+            padding: 20px 22px;
+            background: #fafafa;
+        }
+
+        .vision-box h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .vision-box p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .principle-card {
+            border-radius: 12px;
+            border: 1px solid #ececec;
+            padding: 16px 16px 18px;
+            background: #fff;
+        }
+
+        .principle-card h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .principle-card p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* HERO SHOT & FLOWS */
+
+        .solution-head {
+            max-width: 58ch;
+            margin-bottom: 36px;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .hero-shot {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 0;          /* 不強迫高度 */
+            padding: 0;             /* 拿掉灰底和 padding */
+            background: transparent;
+        }
+
+        .hero-shot img {
+            width: 260px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 32px;
+            border: none;
+            /*box-shadow: 0 18px 40px rgba(0,0,0,0.14);*/
+        }
+
+        .hero-device img.process-img {
+            max-width: 960px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .concept-copy h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .concept-copy p {
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .pill {
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid #e0e0e0;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #777;
+        }
+
+        /* EVALUATION & ETHICS */
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .list-tight li {
+            margin-bottom: 4px;
+        }
+
+        /* OUTCOME & LEARNING */
+
+        .learning-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* RWD */
+
+        @media (max-width: 991.98px) {
+
+            .hero-device {
+                min-height: 260px;
+                border-radius: 18px;
+            }
+
+            .hero-device img {
+                object-position: center top;
+            }
+
+            .hero-shot {
+                min-height: 420px;
+            }
+
+            .hero-shot img {
+                width: 220px;
+            }
+
+            .split-intro {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .role-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .principles-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .concept-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .two-col,
+            .learning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-row-inner {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .case-section {
+                padding: 56px 0;
+            }
+
+            .page-shell {
+                padding-top: 72px;
+            }
+
+            .principles-grid,
+            .info-row-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="assets/imgs/others/logo.svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="#navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#portfolio">Back to Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="page-shell">
+
+    <!-- HERO -->
+    <section class="case-section case-hero case-hero-ed">
+        <div class="case-wrap">
+            <div class="hero-main">
+                <span class="case-kicker">Experience Design module</span>
+                <h1 class="case-title">Energy Diary for an Old House</h1>
+                <p class="case-lead">
+                    A mobile app concept that turns smart meter data into warm, anthropomorphic diaries, helping a climate‑conscious family
+                    feel closer to their Victorian home while reducing carbon emissions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO ROW -->
+    <section class="case-section case-info-row">
+        <div class="case-wrap info-row-inner">
+            <div class="meta-block">
+                <span class="meta-label">Type</span>
+                <div class="meta-value">Individual coursework project</div>
+            </div>
+            <div class="meta-block">
+                <span class="meta-label">Module</span>
+                <div class="meta-value">DSP831 – Experience Design (smart meter & AI brief)</div>
+            </div>
+            <div class="meta-block">
+                <span class="meta-label">Deliverables</span>
+                <div class="meta-value">UX vision, principles, mobile app prototype & development folio</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="case-section">
+        <div class="case-wrap split-intro">
+            <div>
+                <span class="case-kicker">Project overview</span>
+                <h2>Making energy data feel human</h2>
+            </div>
+            <div>
+                <p>
+                    The brief asked us to design a mobile app that uses smart meter data and AI to help UK households engage with low‑carbon technologies
+                    in ways that fit their values and everyday routines
+                </p>
+                <p class="mb-0">
+                    Instead of designing another energy dashboard, I explored how data could feel more intimate and emotionally meaningful.
+                    The turning point came with an aha moment: what if the house and its appliances could help write a shared story with the user?
+                    That idea became a diary‑style app concept, where weekly energy reports are told through warm, characterful entries from the home itself.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERSONA & MY ROLE -->
+    <section class="case-section">
+        <div class="case-wrap role-grid">
+            <div>
+                <img src="assets/imgs/ed/ed-proto-persona.png" alt="Proto persona Jane and her family">
+            </div>
+            <div class="role-copy">
+                <span class="case-kicker">Persona & my role</span>
+                <h3>Designing for Jane and her Victorian home</h3>
+                <p>
+                    As a solo project, I was responsible for the full process from interpreting the module brief to delivering a clickable prototype and folio.
+                    The inspiration for my proto persona came from chatting with my house keeper, which made me reflect on how people care for a house emotionally, not just functionally.
+                </p>
+                <ul>
+                    <li>Used the research pack, video archive and COM‑B analysis to build a proto persona, Jane – a busy mum balancing climate anxiety and protecting her old house.</li>
+                    <li>Framed a UX vision and experience principles around warmth, relatedness and comfort rather than efficiency alone.</li>
+                    <li>Created flows and UI that translate smart meter data into emotional, character‑driven stories while still surfacing actionable insights.</li>
+                    <li>Planned and ran quick user testing sessions, then refined tone, layout and ethics based on feedback.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESIGN PROCESS -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="timeline-head">
+                <span class="case-kicker">Design process</span>
+                <h3>How the concept evolved</h3>
+                <p class="mb-4">
+                    I iterated between discovery, framing and concept testing – restarting when early ideas did not fit the persona, and refining the UX vision and principles before committing to the diary concept.
+                </p>
+            </div>
+
+            <div class="hero-device">
+                <img src="assets/imgs/ed/ed-design-process.png" alt="Experience design process diagram">
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION & PRINCIPLES -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="timeline-head">
+                <span class="case-kicker">Vision & principles</span>
+                <h3>Balancing climate action with a “warm” home</h3>
+            </div>
+
+            <div class="vision-box mb-4">
+                <h4>UX vision statement</h4>
+                <p>
+                    There is an opportunity for a mobile app for a busy mum and progressive climate activist living in an old property, who feels anxious about not doing enough for the planet and about smart devices changing the character of her home. The app should help her confidently engage her family in saving energy and reducing carbon emissions, while preserving the warmth and story of the house.
+                </p>
+            </div>
+
+            <div class="principles-grid">
+                <div class="principle-card">
+                    <h5>Purpose</h5>
+                    <p>
+                        Reduce anxiety about “not doing enough” by showing clear progress and framing actions as part of a meaningful long‑term story rather than a never‑ending task list.
+                    </p>
+                </div>
+                <div class="principle-card">
+                    <h5>Relatedness</h5>
+                    <p>
+                        Keep the house, family and friends at the centre of the experience so that smart products feel like characters in a shared story, not cold machines.
+                    </p>
+                </div>
+                <div class="principle-card">
+                    <h5>Comfort</h5>
+                    <p>
+                        Make it easy to log goals and review energy use in a few taps, with simple language and a calm visual style that fits a cosy home rather than a technical dashboard.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCEPT: HERO SHOT & CORE FUNCTION -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="solution-head">
+                <span class="case-kicker">Concept</span>
+                <h3>Energy diaries written by your home</h3>
+                <p class="mb-0">
+                    The concept reimagines smart meter data as a weekly “chapter” in the life of the house, narrated by different appliances.
+                    Underneath the playful surface, it still surfaces concrete numbers, anomalies and suggestions.
+                </p>
+            </div>
+
+            <div class="concept-grid">
+                <div class="hero-shot">
+                    <img src="assets/imgs/ed/ed-diary.png" alt="Energy Diary hero shot with weekly chapter">
+                </div>
+                <div class="concept-copy">
+                    <h4>Weekly chapter view</h4>
+                    <p>
+                        Each week is presented as a chapter in the house’s diary, with smart meter data summarised as energy used, cost, energy saved and how the family compares to similar households.
+                        Instead of a neutral chart, the app picks one appliance – for example, the fridge – to “write” a short diary entry about what changed this week.
+                    </p>
+                    <p>
+                        The diary draws attention to anomalies (like the washing machine using 10% more energy) and celebrates wins in a friendly, anthropomorphic voice,
+                        making data feel less abstract and more emotionally engaging.
+                    </p>
+
+                    <div class="pill-list">
+                        <span class="pill">Smart meter data</span>
+                        <span class="pill">Storytelling UI</span>
+                        <span class="pill">Family‑friendly tone</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECONDARY FLOW: ANTHROPOMORPHIC DIARIES -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="solution-head">
+                <span class="case-kicker">Key feature</span>
+                <h3>Anthropomorphic appliance diaries</h3>
+                <p class="mb-0">
+                    To keep the experience feeling “alive”, the app rotates different appliance personas and narrative styles, so the house never speaks in exactly the same way twice.
+                </p>
+            </div>
+
+            <div class="concept-grid">
+                <div class="hero-shot">
+                    <img src="assets/imgs/ed/ed-diary.png" alt="Anthropomorphic appliance diary screens">
+                </div>
+                <div class="concept-copy">
+                    <h4>Rotating voices & suggestions</h4>
+                    <p>
+                        One week, the fridge might brag about how little the lights were on; another week, the washing machine might complain about late‑night cycles.
+                        Each diary entry highlights 1–2 concrete behaviours linked to smart meter data, followed by gentle suggestions rather than strict rules.
+                    </p>
+                    <p>
+                        This approach aims to reduce eco‑anxiety by framing change as a playful collaboration with the house instead of a judgement.
+                        Over time, the family builds an emotional relationship with their energy data as part of the home’s ongoing story.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USER TESTING -->
+    <section class="case-section">
+        <div class="case-wrap role-grid">
+            <div>
+                <img src="assets/imgs/ed/ed-testing.jpg" alt="User testing the Energy Diary prototype">
+            </div>
+            <div class="role-copy">
+                <span class="case-kicker">User testing</span>
+                <h3>Checking tone and clarity with users</h3>
+                <p>
+                    I ran quick think‑aloud sessions with classmates using the Figma prototype to understand how they read the diaries and whether the data felt trustworthy.
+                </p>
+                <ul>
+                    <li>Participants enjoyed the idea of the house “speaking”, but wanted clearer connections between diary lines and specific energy metrics.</li>
+                    <li>Some asked for control over how playful or serious the tone is, especially when reading entries with their children.</li>
+                    <li>Based on this, I tightened the copy, separated “story” text from “facts”, and made anomaly call‑outs more explicit.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- EVALUATION & ETHICS -->
+    <section class="case-section">
+        <div class="case-wrap">
+            <div class="timeline-head">
+                <span class="case-kicker">Evaluation & ethics</span>
+                <h3>Testing tone, privacy and responsible AI</h3>
+            </div>
+
+            <div class="two-col">
+                <div>
+                    <h4 class="mb-2">User testing highlights</h4>
+                    <ul class="list-tight">
+                        <li>Participants liked the diary idea but asked for clearer links between the story text and specific data points.</li>
+                        <li>Some wanted control over how “playful” the language is, especially when sharing entries with friends.</li>
+                        <li>Feedback led to tighter copy, more explicit anomaly call‑outs and clearer signposting of suggestions versus celebration.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="mb-2">Ethical safeguards</h4>
+                    <ul class="list-tight">
+                        <li>User privacy in sharing – diary entries can be set to private / friends‑only / public when shared.</li>
+                        <li>Avoid harmful content – AI‑generated copy is constrained to avoid aggressive or guilt‑inducing language.</li>
+                        <li>Remove personal identifiers – smart‑meter analysis deliberately strips out direct IDs in processing.</li>
+                        <li>Clean datasets & regular inspection – training data is scoped to relevant energy patterns and reviewed regularly.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTCOME & LEARNING -->
+    <section class="case-section">
+        <div class="case-wrap learning-grid">
+            <div>
+                <span class="case-kicker">Outcome</span>
+                <h3>What this project produced</h3>
+                <p>
+                    The module deliverables were an eight‑slide narrative, a clickable Figma prototype and a FigJam development folio covering discovery, vision framing and evaluation.
+                </p>
+                <ul>
+                    <li>Defined a persona‑driven concept that goes beyond dashboards to create a more emotional way to live with energy data.</li>
+                    <li>Demonstrated how smart meter data and AI could power both playful storytelling and practical guidance.</li>
+                    <li>Showed a coherent line from research insights and COM‑B analysis through to UX vision, principles and app flows.</li>
+                </ul>
+            </div>
+
+            <div>
+                <span class="case-kicker">What I learned</span>
+                <h3>Designing with feelings, not just facts</h3>
+                <p>
+                    This project helped me practise turning a dense, technical brief into something that feels personal and emotionally resonant.
+                </p>
+                <ul class="mb-0">
+                    <li>How to use research packs and behaviour models like COM‑B to frame a specific persona and emotional context.</li>
+                    <li>How UX vision and experience principles can keep an app concept coherent as it moves from insight to interface.</li>
+                    <li>How to balance playful AI‑generated content with privacy, safety and the risk of increasing users’ climate anxiety.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-6">
+                <p>
+                    &copy;
+                    <script>document.write(new Date().getFullYear())</script>
+                    Ella Hung
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <div class="socials">
+                    <a class="social-item" href="https://www.linkedin.com/in/ellahung" target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="ti-linkedin"></i>
+                    </a>
+                    <a class="social-item" href="https://github.com/ellahung" target="_blank" rel="noopener noreferrer">
+                        <i class="ti-github"></i>
+                    </a>
+                    <a class="social-item" href="mailto:hungella93@gmail.com">
+                        <i class="ti-email"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+<script src="assets/js/steller.js"></script>
+
+</body>
+</html>
