@@ -61,6 +61,28 @@
     font-size: 0.9rem;
 }
 
+/* —— user testing —— */
+
+.user-test-photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 兩張並排 */
+    gap: 12px;                                       /* 中間留一點距離 */
+}
+
+.user-test-photos img {
+    width: 100%;
+    height: 400px;      /* 跟 timeline 圖一樣高，或你自己決定 */
+    object-fit: cover;  /* 保持滿版、裁掉多餘部分 */
+    border-radius: 10px;
+}
+
+/* 手機版就讓照片上下排，避免太擠 */
+@media (max-width: 575.98px) {
+    .user-test-photos {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* —— Vision & principles —— */
 
 .vision-box {
@@ -117,7 +139,7 @@
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     gap: 40px;
-    align-items: start;
+    align-items: center;
 }
 
 /* 手機 mockup 區，之後你可以再改成 card 版 */
