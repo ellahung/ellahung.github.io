@@ -1,0 +1,344 @@
+/* ---------- HERO（研究版型） ---------- */
+
+.case-hero.research-hero {
+    position: relative;
+    padding: 80px 0 72px;
+    color: #111;
+    background: #fafafa;
+    overflow: hidden;
+}
+
+/* background 做成比較安靜的紙感 */
+.research-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, #f4f4f4 0, #ffffff 40%, #f8f8f8 100%);
+    opacity: 1;
+    z-index: 0;
+}
+
+.research-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.94) 46%, rgba(255,255,255,0.88) 100%);
+    z-index: 1;
+}
+
+.research-hero .case-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-grid--research {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: end;
+    min-height: 52vh;
+}
+
+.hero-meta--research .meta-list {
+    border-radius: 10px;
+    padding: 16px 18px 8px;
+    border: 1px solid #e4e4e4;
+    background: rgba(250,250,250,0.9);
+}
+
+/* ---------- 研究頁專用標題 / 文案 ---------- */
+
+.section-head {
+    margin-bottom: 28px;
+}
+
+.section-title {
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+}
+
+.section-head p {
+    color: #555;
+    max-width: 60ch;
+    line-height: 1.85;
+}
+
+.section-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* ---------- 兩欄文字 layout ---------- */
+
+.research-grid-two {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.research-copy p {
+    color: #555;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+}
+
+/* ---------- Brief / frame 區 ---------- */
+
+.research-frame {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.research-frame-main p {
+    color: #555;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+}
+
+.research-frame-side {
+    padding: 18px 18px 16px;
+    border-radius: 10px;
+    border: 1px solid #e4e4e4;
+    background: #fcfcfc;
+}
+
+/* ---------- 共用 bullet 列表（研究頁） ---------- */
+
+.bullet-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 0.96rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.bullet-list li::before {
+    content: "•";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: #aaa;
+}
+
+/* ---------- Research steps ---------- */
+
+.research-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.research-step {
+    border-radius: 10px;
+    border: 1px solid #ececec;
+    background: #ffffff;
+    padding: 18px 16px 16px;
+}
+
+.step-no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.research-step h4 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.research-step p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* ---------- Fieldwork evidence ---------- */
+
+.evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 32px;
+}
+
+.evidence-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.evidence-card--wide {
+    grid-column: span 2;
+}
+
+.evidence-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #f4f4f4;
+    display: block;
+}
+
+.evidence-img--tall {
+    height: 260px;
+}
+
+.evidence-card figcaption {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.figure-label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 2px;
+}
+
+/* ---------- Synthesis ---------- */
+
+.synthesis-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+.synthesis-board-wrap {
+    border-radius: 10px;
+    border: 1px solid #e4e4e4;
+    background: #fafafa;
+    padding: 10px;
+}
+
+.synthesis-board-img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+.synthesis-copy .text-block + .text-block {
+    margin-top: 18px;
+}
+
+/* ---------- Opportunities ---------- */
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.opportunity-card {
+    border-radius: 10px;
+    border: 1px dashed #dddddd;
+    background: #fdfdfd;
+    padding: 18px 16px 16px;
+}
+
+.opportunity-no {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.opportunity-card h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.opportunity-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #555;
+}
+
+/* ---------- RWD ---------- */
+
+@media (max-width: 991.98px) {
+    .hero-grid--research {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-meta--research .meta-list {
+        max-width: 420px;
+    }
+
+    .research-grid-two,
+    .research-frame,
+    .synthesis-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .research-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .evidence-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .evidence-card--wide {
+        grid-column: span 1;
+    }
+
+    .opportunity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    .research-steps {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .evidence-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .opportunity-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
